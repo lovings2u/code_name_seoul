@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170808082749) do
+ActiveRecord::Schema.define(version: 20170808090939) do
 
   create_table "histories", force: :cascade do |t|
     t.boolean  "answerbool"
@@ -35,13 +35,24 @@ ActiveRecord::Schema.define(version: 20170808082749) do
   end
 
   create_table "players", force: :cascade do |t|
-    t.integer  "theme_id",   null: false
-    t.integer  "team_id",    null: false
-    t.string   "name",       null: false
-    t.integer  "hintcount",  null: false
-    t.datetime "starttime",  null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name",                   default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.integer  "theme_id"
+    t.integer  "team_id"
+    t.integer  "hintcount",              default: 0,  null: false
+    t.datetime "starttime"
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.index ["name"], name: "index_players_on_name", unique: true
+    t.index ["reset_password_token"], name: "index_players_on_reset_password_token", unique: true
     t.index ["team_id"], name: "index_players_on_team_id"
     t.index ["theme_id"], name: "index_players_on_theme_id"
   end
@@ -69,6 +80,7 @@ ActiveRecord::Schema.define(version: 20170808082749) do
     t.string   "name",           null: false
     t.string   "questionlayout", null: false
     t.string   "answerlayout",   null: false
+    t.string   "answer",         null: false
     t.integer  "team_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false

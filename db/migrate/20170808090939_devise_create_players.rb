@@ -1,16 +1,15 @@
-class AddDeviseToPlayers < ActiveRecord::Migration[5.0]
-  def self.up
-    change_table :players do |t|
+class DeviseCreatePlayers < ActiveRecord::Migration[5.0]
+  def change
+    create_table :players do |t|
       ## Database authenticatable
-      t.string :email,              null: false, default: ""
+      t.string :name,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
       ## Custom
-      t.belongs_to :theme, null: false
-      t.belongs_to :team, null: false
-      t.string :name, null: false
-      t.integer :hintcount, null: false
-      t.datetime :starttime, null: false
+      t.belongs_to :theme, null: true
+      t.belongs_to :team, null: true
+      t.integer :hintcount, null: false, default: 10
+      t.datetime :starttime
 
       ## Recoverable
       t.string   :reset_password_token
@@ -38,19 +37,12 @@ class AddDeviseToPlayers < ActiveRecord::Migration[5.0]
       # t.datetime :locked_at
 
 
-      # Uncomment below if timestamps were not included in your original model.
-      # t.timestamps null: false
+      t.timestamps null: false
     end
 
-    add_index :players, :email,                unique: true
+    add_index :players, :name,                unique: true
     add_index :players, :reset_password_token, unique: true
     # add_index :players, :confirmation_token,   unique: true
     # add_index :players, :unlock_token,         unique: true
-  end
-
-  def self.down
-    # By default, we don't want to make any assumption about how to roll back a migration when your
-    # model already existed. Please edit below which fields you would like to remove in this migration.
-    raise ActiveRecord::IrreversibleMigration
   end
 end
