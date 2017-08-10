@@ -71,4 +71,12 @@ class StageController < ApplicationController
             end
         end
     end
+
+    def gameending
+        # 모든 문제를 제시간 안에 풀었을 때 나오는 화면
+    end
+
+    def gameover
+        # 시간 다됐을 때 뜨는 화면
+    end
 end
