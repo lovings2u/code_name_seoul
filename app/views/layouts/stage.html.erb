@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= @title ? @title : '게임화면' %></title>
+    <%= favicon_link_tag 'codepa' %>
+    <title>CodeName</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'stage', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href='https://fonts.googleapis.com/css?family=Share+Tech|Orbitron:500' rel='stylesheet' type='text/css'>
+    <%= javascript_include_tag 'stage', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>

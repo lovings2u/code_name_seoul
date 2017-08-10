@@ -1,2 +1,148 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<body class="smoothscroll enable-animation">
+
+    <!-- wrapper -->
+    <div id="wrapper">
+
+        <!-- 
+            AVAILABLE HEADER CLASSES
+
+            Default nav height: 96px
+            .header-md 		= 70px nav height
+            .header-sm 		= 60px nav height
+
+            .noborder 		= remove bottom border (only with transparent use)
+            .transparent	= transparent header
+            .translucent	= translucent header
+            .sticky			= sticky header
+            .static			= static header
+            .dark			= dark header
+            .bottom			= header on bottom
+            
+            shadow-before-1 = shadow 1 header top
+            shadow-after-1 	= shadow 1 header bottom
+            shadow-before-2 = shadow 2 header top
+            shadow-after-2 	= shadow 2 header bottom
+            shadow-before-3 = shadow 3 header top
+            shadow-after-3 	= shadow 3 header bottom
+
+            .clearfix		= required for mobile menu, do not remove!
+
+            Example Usage:  class="clearfix sticky header-sm transparent noborder"
+        -->
+        <div id="header" class="sticky dark header-md transparent noborder clearfix">
+
+            <!-- TOP NAV -->
+            <header id="topNav">
+                <div class="container">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    
+
+                    <!-- Logo -->
+                    <a class="logo pull-left" href="/">
+                        <img src="<%= asset_path 'codelogo.png' %>" alt="" />
+                    </a>
+
+                    <!-- 
+                        Top Nav 
+                        
+                        AVAILABLE CLASSES:
+                        submenu-dark = dark sub menu
+                    -->
+                    <div class="navbar-collapse pull-right nav-main-collapse collapse">
+                        <nav class="nav-main">
+
+                            <!--
+                                NOTE
+                                
+                                For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
+                                Direct Link Example: 
+
+                                <li>
+                                    <a href="#">HOME</a>
+                                </li>
+                            -->
+                            <ul id="topMain" class="nav nav-pills nav-main">															
+                                <li class="dropdown"><!-- BLOG -->
+                                    <a class="dropdown-toggle" href="#">
+                                        INTRODUCE
+                                    </a>										
+                                </li>
+                                
+                                <li class="dropdown"><!-- SHOP -->
+                                    <a class="dropdown-toggle" href="themes">
+                                        THEME
+                                    </a>										
+                                </li>
+                                
+                                <li class="dropdown mega-menu"><!-- SHORTCODES -->
+                                    <a class="dropdown-toggle" href="#">
+                                        RANKING
+                                    </a>										
+                                </li>
+                            </ul>
+
+                        </nav>
+                    </div>
+
+                </div>
+            </header>
+            <!-- /Top Nav -->
+
+        </div>
+
+
+
+        <!-- SLIDER -->
+        <section id="slider" class="fullheight" style="background-image:url('<%= asset_path 'codeback.png' %>');">
+            <div class="overlay dark-1"><!-- dark overlay [0 to 9 opacity] --></div>
+
+            <div class="display-table">
+                <div class="display-table-cell vertical-align-middle">
+                    <div class="container">
+
+                        <div class="slider-featured-text text-center">
+                            <h2 class="weight-300 text-white wow fadeInUp" data-wow-delay="0.4s" style="font-family:'kopubbatang'; margin-bottom:15px;">
+                                서울에 초대형 블록버스터가 온다!
+                            </h2>
+                            <h1 class="text-white wow fadeInUp" data-wow-delay="0.8s" style="margin-top:0px;">
+                                <span class="mainintro" style="font-weight:300; color:white;">"이 </span><span class="mainintro" style="font-weight:700; color:#38e798;">위험한 게임</span><span class="mainintro" style="font-weight:300; color:white;">에 당신을 초대합니다"</span>
+                            </h1>
+                            
+<!--								<a class="btn btn-default btn-lg wow fadeIn" data-wow-delay="1.5s" href="themes">START</a>-->
+                            
+                            <a class="wow fadeIn" data-wow-delay="1.5s" href="themes"><div class="enjoy-css" style="margin-top:50px;">시작하기</div></a>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- /SLIDER -->
+
+
+
+
+        <!-- FOOTER -->
+        <!-- /FOOTER -->
+
+    </div>
+    <!-- /wrapper -->
+
+
+    <!-- SCROLL TO TOP -->
+    <a href="#" id="toTop"></a>
+
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="inner">
+            <span class="loader"></span>
+        </div>
+    </div><!-- /PRELOADER -->
+</body>

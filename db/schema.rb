@@ -40,8 +40,10 @@ ActiveRecord::Schema.define(version: 20170810020801) do
     t.string   "encrypted_password",     default: "", null: false
     t.integer  "theme_id"
     t.integer  "team_id"
+    t.integer  "currentstage",           default: 0,  null: false
     t.integer  "hintcount",              default: 10, null: false
     t.datetime "starttime"
+    t.datetime "endtime"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -100,6 +102,7 @@ ActiveRecord::Schema.define(version: 20170810020801) do
 
   create_table "teams", force: :cascade do |t|
     t.string   "name",       null: false
+    t.string   "imageurl",   null: false
     t.integer  "theme_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

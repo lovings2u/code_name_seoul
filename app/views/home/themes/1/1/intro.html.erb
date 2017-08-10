@@ -1,0 +1,178 @@
+<link id="css_dark_skin" href="/assets/css/layout-dark.css" rel="stylesheet" type="text/css" title="dark">
+
+<body class="smoothscroll enable-animation">
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.noborder 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent noborder"
+			-->
+			<div id="header" class="sticky dark header-md transparent noborder clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						
+
+						<!-- Logo -->
+						<a class="logo pull-left" href="index.html">
+							<img src="codelogo.png" alt="" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse pull-right nav-main-collapse collapse">
+							<nav class="nav-main">
+
+								<!--
+									NOTE
+									
+									For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
+									Direct Link Example: 
+
+									<li>
+										<a href="#">HOME</a>
+									</li>
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main">															
+									<li class="dropdown"><!-- BLOG -->
+										<a class="dropdown-toggle" href="#">
+											INTRODUCE
+										</a>										
+									</li>
+                                  
+									<li class="dropdown"><!-- SHOP -->
+										<a class="dropdown-toggle" href="theme.html">
+											THEME
+										</a>										
+									</li>
+                                  
+									<li class="dropdown mega-menu"><!-- SHORTCODES -->
+										<a class="dropdown-toggle" href="#">
+											RANKING
+										</a>										
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+
+
+
+			<!-- -->
+			<section class="fullheight" style="height: 100vh; overflow-y: auto; background-image:url('<%= asset_path 'codeback.png' %>');">
+              <div class="overlay dark-1"><!-- dark overlay [0 to 9 opacity] --></div>
+                    <div class="container addwidth">
+
+                        <!-- POST ITEM -->
+                        <div class="blog-post-item" style="margin-top: 50px; margin-bottom: 0px; padding-bottom: 20px;">	
+
+                            <h2 style="font-size: 22px; font-family: 'kopubdotum'"><a href="#">한글 실종 사건</a></h2>
+
+                            <ul class="blog-post-info list-inline" style="font-family: 'kopubdotum'; font-weight: 300;">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-clock-o"></i>  
+                                        <span>제한시간 120분</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-comment-o"></i> 
+                                        <span>난이도 ★★★★★</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-user"></i> 
+                                        <span>미션 성공율 24%</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <p style="color">훈민정음이 창제된 이후, 한글을 지키고자 하는 세력과 박해하고자 하는 세력은 언제나 존재해왔다. [조직]은 한국 고유한 언어인 한글 창제에 반대하며, 한글의 효용성에 대한 의문을 제기하며 종래에는 한글의 사용을 억제하고 타 문화권의 언어를 이용해 한국어를 표기하려는 음모를 꾸미고 있다. [조직]의 정확한 정체는 아직도 파악되지 않았으며, 간간이 검거 가능한 말단 조직원의 증언으로 이에 대해 간략히 유추할 뿐이다.</p>
+
+                            <p>역사 속 한글 박해와 관련된 모든 사건의 배후에는 항상 [조직]이 있었다. </p>
+
+                            <p>처음 훈민정음으로 반포된 한글은 [조직]의 통제에 따라 조선 시대에는 언문이라고 불리었다. 한자가 아닌 언어라는 뜻으로, 자주적인 언어성을 부정하고자 한 것이다. 이외에도 암클, 상말글, 증글 등으로 낮추어 부르기도 했다. </p>
+
+                            <p>1504년, 연산군은 모든 백성에게 한글 쓰기를 금하고, 한글로 된 책을 불사르는 등 한글을 박해하였다. 연산군의 잘못을 지적하는 한글 벽서가 붙었기 때문이라고 알려져 있으나, 이는 사실과 다르다. 이것은 한글 창제 시부터 명맥을 유지한 [조직]의 지속적인 로비에 따라 이루어진 한글 박해 음모의 일부였다. 이들은 상황에 따라 흥청으로, 때로는 간신으로 위장해 조정 내 한글 사용에 대해 은밀히 의견을 펼쳤다. </p>
+                          
+                            <p>일제 강점기 중, 민간의 모든 국어 운동이 뿌리 뽑혔던 민족말살정책 중 일부에도 이들이 배후에 있었다. 한국어 말살 정책으로 인하여 여러 한국어 매체가 폐간되었으며, 우리말 연구와 사전편찬을 진행하던 조선어학회를 앞장서 박해한 것으로 알려진 '야스다(안정묵)' 또한 [조직] 소속이었음이 밝혀졌다. 당시 그들의 의중이 한국어 말살이었는지 한글 말살이었는지는 아직까지 확실하게 파악되지 않았다.</p>
+                          
+                            <p>현대의 이르러 [조직]은 지능화·광역화되었다. 이들은 온라인상에서 신조어나 은어, 줄임말을 만들어 내기도 한다. 특정 집단을 겨냥해 줄임말을 배포해 집단 간의 소통 부재를 유발하는 식이다. 또한, 맞춤법에 신경을 쓰면 '강박적인 사람'이라며 부정적인 이미지를 덧씌운다. 들리는 대로 쓰고, 내키는 대로 줄인다. 재미와 즐거움을 앞세워 소통의 장애를 일으키고자 하는 것이다. 오프라인에서는 관련 문화재를 훼손하거나 탈취하고 있는 것으로 파악됐다. 최근 입수한 정보에 따르면 [조직]은 최근 타임머신을 개발한 것으로 보인다. 하지만 물질을 과거로 보낸다는 것은 아직 불가능한 일이어서, 과거에 존재하던 인물과 현재 인물의 의식을 일정 시간 동안 교환하는 식이다. 현재 우리 조직에서 사용하는 [것]과 같은 방식으로 작동하리라 추측하고 있다.</p>
+                          
+                            <p>이번 사건은 "훈민정음 해례본"의 도난 사건으로, 세종이 훈민정음을 창제한 직후에 도난된 것으로 보인다. 이것은 집현전 학자로 위장하고 있던 우리 측 조직원이 입수한 정보이며, 도난 시기는 반포 직전으로 훈민정음의 존재가 극비리에 부쳐지고 있었을 때다. 그래서 우리는 이것이 당시 일반 도둑의 소행이 아닌 [조직]의 계획적인 소행이라 보고 수사를 진행하고 있었다. 다행히 최근에 말단조직원 M을 검거해 이것이 [조직]의 만행임을 밝혀냈다. 현재 [조직]이 해례본을 현재로 가져온 것인지, 당시 시간대에 특정 장소에 엄폐 후 현재에 이르러 찾으려고 하는 것인지는 파악하지 못했다.</p>
+                          
+                            <p>해례본은 한글의 창제를 담고 있는 책으로, 이후의 언해본이나 예의본 등의 바탕이 되는 책이다. 허나 해례본이 반포 직전에 도난당했기 때문에 이후의 서적이 정상적으로 출간되리라 장담할 수 없으며, 나아가 훈민정음 또한 반포할 수 없는 상황이다. 게다가 불행히도 오늘이 반포 전날로 조직원을 돌려보낼 수 있는 마지막 날이다. 역사상으로 그 날 반포가 되지 않으면, 역사상의 인과율이 꼬여 한글과 관련해 어떤 일이 생길지 장담할 수 없는 상황이다. 당신은 서울에서 휴가를 즐기고 있었으나, 비상상황으로 이번 사건에 투입되어 오늘 내로 훈민정음 해례본을 되찾아야 하는 상황이다. 최근 검거한 [조직]의 말단 조직원 M으로 위장해, [조직]의 지령을 받고 수수께끼를 풀어 해례본을 되찾아라.</p>
+
+                        </div>
+                        <!-- /POST ITEM -->
+
+
+
+
+                    </div>
+			</section>
+			<!-- / -->
+
+
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+	</body>

@@ -31,9 +31,50 @@
     <%= f.datetime_local_field :starttime %>
   </div>
 
+  <div class="field">
+    <%= f.label :endtime %><br />
+    <%= f.datetime_local_field :endtime %>
+  </div>
+
+  <div class="field">
+    <%= f.label :theme_id %>
+    <%= f.collection_select :theme_id, Theme.order(:id), :id, :name %>
+  </div>
+
+  <div id="team" class="field">
+    팀선택
+    
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+<script>
+  function getteam(themeid) {
+    var html = "<select name=\"player[team_id]\" id=\"player_team_id\"></select>";
+    if ($('#player_team_id').empty())
+      $('#team').append(html);
+    $.ajax({
+      type: "GET",
+      url: '/getteam/1',
+      dataType: 'json',
+      success: function(data) {
+        $.each(data, function(index, element) {
+          var html="<option value=\"" + element.id + "\">" + element.name + "</option>"
+          $('#player_team_id').append(html);
+        });
+      }
+    });
+  }
+
+  getteam($('#player_theme_id').val());
+  
+  $('#player_theme_id').change(function() {
+    var themeid = $(this).val();
+    getteam(themeid);
+  });
+</script>

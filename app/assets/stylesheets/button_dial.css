@@ -1,0 +1,81 @@
+.button_dial {
+  margin-top: 640px;
+}
+
+.button_dial button {
+	position:relative;
+	border:2px #38e798;
+	margin:0;
+	padding:25px;
+	cursor:pointer;
+	font-size: 90px;
+	font-weight:bold;
+	color:rgba(0,0,0,0);
+	background:transparent;
+	border-radius: 30px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+}
+
+.button_dial button,
+.button_dial button:after,
+.button_dial button:before {
+	padding:.6875rem 6rem;
+	-webkit-transition:-webkit-transform 0.75s,background-color .125s;
+	-moz-transition:-moz-transform 0.75s,background-color .125s;
+	-ms-transition:-ms-transform 0.75s,background-color .125s;
+	transition:transform 0.75s,background-color .125s;
+	-webkit-transform-style:preserve-3d;
+	-moz-transform-style:preserve-3d;
+	-ms-transform-style:preserve-3d;
+	transform-style:preserve-3d;
+}
+
+.button_dial button:after,
+.button_dial button:before {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	border-radius:.25rem;
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	-ms-backface-visibility:hidden;
+	backface-visibility:hidden;
+
+}
+
+.button_dial button:before {
+	z-index:2;
+	color:#fff;
+	background-color:#232323;
+  border: 1px #38e798 solid;
+	content:attr(data-label);
+  border-radius: 30px;
+}
+
+.button_dial button:after {
+	z-index:1;
+	background-color:#232323;
+  border: 1px #38e798 solid;
+  border-radius: 30px;
+	background-repeat:no-repeat;
+	background-position:center center;
+	-webkit-transform:rotateX(180deg);
+	-moz-transform:rotateX(180deg);
+	-ms-transform:rotateX(180deg);
+	transform:rotateX(180deg);
+	content:'';
+}
+
+.button_dial button:active:before {
+	background-color:#38e798;
+}
+
+.button_dial button.loading {
+	-webkit-transform:rotateX(180deg);
+	-moz-transform:rotateX(180deg);
+	-ms-transform:rotateX(180deg);
+	transform:rotateX(180deg);
+}

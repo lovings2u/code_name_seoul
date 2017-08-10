@@ -8,8 +8,10 @@ class DeviseCreatePlayers < ActiveRecord::Migration[5.0]
       ## Custom
       t.belongs_to :theme, null: true
       t.belongs_to :team, null: true
+      t.integer :currentstage, null: false, default: 0
       t.integer :hintcount, null: false, default: 10
       t.datetime :starttime
+      t.datetime :endtime
 
       ## Recoverable
       t.string   :reset_password_token

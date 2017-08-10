@@ -7,8 +7,7 @@ class Player < ApplicationRecord
   belongs_to :theme, optional: true
   belongs_to :team, optional: true
 
-  has_many :solve_stages
-  has_many :stages, through: :solve_stages
+  has_many :solve_stages, foreign_key: "player_id", class_name: "Stage"
 
   has_many :player_histories
   has_many :histories, through: :player_histories

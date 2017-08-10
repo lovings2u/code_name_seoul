@@ -1,0 +1,168 @@
+<link id="css_dark_skin" href="/assets/css/layout-dark.css" rel="stylesheet" type="text/css" title="dark">
+
+<body class="smoothscroll enable-animation">
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.noborder 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent noborder"
+			-->
+			<div id="header" class="sticky dark header-md transparent noborder clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						
+
+						<!-- Logo -->
+						<a class="logo pull-left" href="/">
+							<img src="<%= asset_path 'codelogo.png' %>" alt="" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse pull-right nav-main-collapse collapse">
+							<nav class="nav-main">
+
+								<!--
+									NOTE
+									
+									For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
+									Direct Link Example: 
+
+									<li>
+										<a href="#">HOME</a>
+									</li>
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main">															
+									<li class="dropdown"><!-- BLOG -->
+										<a class="dropdown-toggle" href="/intro">
+											INTRODUCE
+										</a>										
+									</li>
+                                  
+									<li class="dropdown"><!-- SHOP -->
+										<a class="dropdown-toggle" href="/themes">
+											THEME
+										</a>										
+									</li>
+                                  
+									<li class="dropdown mega-menu"><!-- SHORTCODES -->
+										<a class="dropdown-toggle" href="/ranking">
+											RANKING
+										</a>										
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+
+
+
+			<!-- -->
+			<section class="fullheight" style="height: 100vh; overflow-y: auto; background-image:url('<%= asset_path 'codeback.png' %>');">
+              <div class="overlay dark-1"><!-- dark overlay [0 to 9 opacity] --></div>
+                    <div class="container addwidth">
+
+                        <!-- POST ITEM -->
+                        <div class="blog-post-item" style="margin-top: 120px; margin-bottom: 0px; padding-bottom: 20px;">	
+
+                            <h2 style="font-size: 22px; font-family: 'kopubdotum'"><a href="#">집현전 해례본 도난사건</a></h2>
+
+                            <ul class="blog-post-info list-inline" style="font-family: 'kopubdotum'; font-weight: 300;">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-clock-o"></i>  
+                                        <span>제한시간 120분</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-comment-o"></i> 
+                                        <span>난이도 ★★★★★</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-user"></i> 
+                                        <span>미션 성공율 22%</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <p>당신은 집현전 학자이다. 고된 근무 끝에 드디어 내일, 훈민정음을 세상에 반포하는 날이다. 임금께서 손수 백성을 가르치는 바른 소리를 지으시어, 몇몇 학자들이 이의 창제 원리와 사용 예시를 책으로 엮어낸 것이 바로 훈민정음 해례본이다. 내일에 앞서 마지막으로 밤새 주석을 달며 최종 확인을 마친 뒤 집현전의 문을 나서려는 찰나, 집현전 안에서 인기척이 느껴졌다. 방금까지 나밖에 없었던 곳인데...?</p>
+
+                            <p>이상함을 느끼고 문을 다시 열어보니, 그곳에 온통 검은색 천을 뒤집어쓴 도둑이 해례본을 들고 있는 게 아닌가? 나와 눈이 마주친 도둑은 재빠르게 도망치기 시작했다. 저걸 막지 못하면 내 목이 달아날 참이다. 체통을 챙길 새가 없었다. 부리나케 따라 뛰기 시작했다. 손을 뻗어 도둑을 막 잡으려는 찰나, 하늘의 태양만큼 밝은 빛이 눈에 비췄고 당신은 아득히 정신을 잃고 만다.</p>
+
+                            <p>눈을 떠보니, 온갖 알 수 없는 복장을 한 사람들과 다리가 둥글게 변한 말들로 가득하다. 그리고 내일 반포하기로 되어있는 글자들이 곳곳에 널려있다. 도대체 이게 어떻게 된 일일까? 생각을 해보아도 알 수 없다. 황망히 서있는데, 지금 입고 있는 의복의 주머니에서 의문의 쪽지가 발견된다. 이 또한 언문으로 쓰여있으며, 광화문이라고 쓰여있는 것을 보니 내가 위치한 곳이 한양인 것 같다. 게다가 다행히 이곳의 사람들도 언문을 사용하고 있다. 말이 통할 것 같으니 이 쪽지에 관해 물을 수 있을 것 같다. 어서 도둑을 잡고 돌아가면 좋겠지만, 일단은 할 수 있는 게 없으니 쪽지에 대해 추적하는 것이 좋겠다.</p>                            
+
+                        </div>
+                        <!-- /POST ITEM -->
+
+
+
+
+                    </div>
+			</section>
+			<!-- / -->
+
+
+
+		</div>
+		<!-- /wrapper -->
+
+
+		<!-- SCROLL TO TOP -->
+		<a href="#" id="toTop"></a>
+
+
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+	</body>

@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
+		<%= favicon_link_tag 'codepa' %>
     <title><%= @title ? @title : 'Code Name : 서울' %></title>
+
+    <meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="Author" content="멋쟁이 사자처럼 5기 코드네임 서울" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- CORE CSS -->
+		<link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->
+		<link href="/assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="/assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="/assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="/assets/css/color_scheme/lightgrey.css" rel="stylesheet" type="text/css" id="color_scheme" />
+      
+    <link rel="stylesheet" type="text/css" href="/assets/kopubbatang.css">
+    <link rel="stylesheet" type="text/css" href="/assets/kopubdotum.css">
+    
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+  <%= yield %>
+
+  <!-- JAVASCRIPT FILES -->
+		<script type="text/javascript">var plugin_path = '/assets/plugins/';</script>
+		<script type="text/javascript" src="/assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+
+		<!-- SCRIPTS -->
+		<script type="text/javascript" src="/assets/js/scripts.js"></script>
 </html>
