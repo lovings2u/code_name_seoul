@@ -131,5 +131,6 @@ $(function() {
       }
     }
   };
-  Countdown.init();
+  if (window.location.href == 'http://localhost:3000/game')
+    Countdown.init();
 })

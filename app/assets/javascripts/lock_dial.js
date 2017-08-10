@@ -1,9 +1,4 @@
 $(function() {
-  $("#getBtn").click(function(evt) {
-    alert(combo.getCombination());
-  });
-
-
   function ComboLock()
   {
     this.mouseDownY = null;
@@ -75,6 +70,6 @@ $(function() {
   	return res;
   };
 
-  var combo = new ComboLock();
+  window.combo = new ComboLock();
   combo.init();
 })

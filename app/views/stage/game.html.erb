@@ -1,11 +1,12 @@
-<div class="timer"></div>
 
+<div class="timer"><%= render partial: 'count', left_time: @left_time %></div>
+<%= render partial: "stage/themes/#{current_player.theme_id}/#{current_player.team_id}/#{current_player.currentstage}", stage: current_player.currentstage %>
 
 <script>
-    $(document).ready(
+    /* $(document).ready(
          function() {
           setInterval(function() {
             $('.timer').load('/timer');
         }, 1000);
-    });
+     }); */
 </script>

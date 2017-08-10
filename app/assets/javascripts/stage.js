@@ -18,3 +18,4 @@
 //= require lock_dial
 //= require phone_dial
 //= require button_dial
+//= require custom

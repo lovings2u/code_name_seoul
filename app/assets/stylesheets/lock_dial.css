@@ -4,7 +4,7 @@
   text-align: center;
   margin-top: 10px;
 }
-.btnContainer button
+.btnContainer button, #getBtn
 {
   color: #fff;
   border: 1px #333 solid;

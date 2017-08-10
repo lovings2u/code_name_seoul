@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   post '/game' => 'stage#game'
   get '/timer' => 'stage#timer'
 
-  get '/answer/:stage_id/:answer' => 'stage#answercheck'
+  post '/answer' => 'stage#answercheck'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

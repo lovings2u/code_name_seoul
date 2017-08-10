@@ -4,6 +4,7 @@ class CreateTeams < ActiveRecord::Migration[5.0]
       t.string :name, null: false
       t.string :imageurl, null: false
       t.belongs_to :theme, foreign_key: true
+      t.integer :anotherteam
       t.timestamps
     end
   end

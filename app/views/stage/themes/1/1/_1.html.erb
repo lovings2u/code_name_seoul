@@ -1,4 +1,3 @@
-<%= render "count" %>
 <div class="row">
   <div class="lockContainer text-center">
     <div class="lockDigitContainer digit0 col-xs-3">
@@ -22,7 +21,10 @@
       <div class="lockDigit lockDigitNext">1</div>
     </div>
   </div>
+  <%= form_tag '/answer', id: 'form', remote: true, :onsubmit => "checkanswer()" do %>
   <div class="btnContainer">
-    <button id="getBtn">Get Combination</button>
+    <%= hidden_field_tag 'answer' %>
+    <%= submit_tag 'Get Combination', id: "getBtn" %>
   </div>
+  <% end %>
 </div>

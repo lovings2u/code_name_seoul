@@ -17,6 +17,7 @@ class StageController < ApplicationController
 
         @themeid = current_player.theme_id
         @teamid = current_player.team_id
+        @left_time = time_diff(current_player.endtime - 9*3600, DateTime.now)
 
         render 'stage/game', layout: 'stage'
     end
@@ -27,11 +28,14 @@ class StageController < ApplicationController
     end
 
     def gethintbool
-        # 힌트 받아올 수 있는지 확인하는 페이지
-        stageid = params[:stage_id]
-
+        
+        getbool = false
         # 상대방이 풀었는지 확인
-        getbool = true
+        anotherteam = Team.find(current_player.team.anotherteam)
+        another = Player.find_by_team_id(anotherteam.id)
+        if another.currentstage > current_player.currentstage
+            getbool = true
+        end
 
         # 결과 출력
         respond_to do |format|
@@ -92,20 +96,17 @@ class StageController < ApplicationController
     end
 
     def answercheck
-        stage = Stage.find(params[:stage_id])
+        stage = Stage.find(current_player.currentstage)
         answer = params[:answer]
 
         respond_to do |format|
             if stage.answer == answer
-                result = Hash.new
-                result["result"] = "P"
-                format.html { render xml: result.to_xml }
-                format.xml { render xml: result.to_xml }
+                @message = "P"
+                current_player.update(currentstage: current_player.currentstage + 1)
+                format.js
             else
-                result = Hash.new
-                result["result"] = "F"
-                format.html { render xml: result.to_xml }
-                format.xml { render xml: result.to_xml }
+                @message = "F"
+                format.js
             end
         end
     end

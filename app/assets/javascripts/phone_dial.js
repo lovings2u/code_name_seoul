@@ -20,9 +20,15 @@ $(function($) {
         if (enterCode == pin) {
           // Right PIN!
           alert("맞춤!");
-          $("#fields .numberfield").addClass("right");
-          $("#anleitung p").html("Amazing!<br>You entered the correct Code!");
-
+          $.ajax({
+            url: '/answer',
+            method: 'POST',
+            data: { 'answer': enterCode },
+            success: function(data) {
+              eval(data);
+              // window.location.reload();
+            }
+          });
         } else {
           // Wrong PIN!
           $("#fields").addClass("miss");
