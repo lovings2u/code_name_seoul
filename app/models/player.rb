@@ -13,6 +13,8 @@ class Player < ApplicationRecord
   has_many :player_histories
   has_many :histories, through: :player_histories
 
+  has_one :record
+
   def email_required?
     false
   end

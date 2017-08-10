@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170808090939) do
+ActiveRecord::Schema.define(version: 20170810020801) do
 
   create_table "histories", force: :cascade do |t|
-    t.boolean  "answerbool"
-    t.string   "answer"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "answerbool",     null: false
+    t.string   "answer",         null: false
+    t.integer  "questionnumber", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "images", force: :cascade do |t|
@@ -39,7 +40,7 @@ ActiveRecord::Schema.define(version: 20170808090939) do
     t.string   "encrypted_password",     default: "", null: false
     t.integer  "theme_id"
     t.integer  "team_id"
-    t.integer  "hintcount",              default: 0,  null: false
+    t.integer  "hintcount",              default: 10, null: false
     t.datetime "starttime"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -55,6 +56,16 @@ ActiveRecord::Schema.define(version: 20170808090939) do
     t.index ["reset_password_token"], name: "index_players_on_reset_password_token", unique: true
     t.index ["team_id"], name: "index_players_on_team_id"
     t.index ["theme_id"], name: "index_players_on_theme_id"
+  end
+
+  create_table "records", force: :cascade do |t|
+    t.integer  "player_id"
+    t.integer  "theme_id"
+    t.time     "playtime",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["player_id"], name: "index_records_on_player_id"
+    t.index ["theme_id"], name: "index_records_on_theme_id"
   end
 
   create_table "solve_stages", force: :cascade do |t|
@@ -93,6 +104,15 @@ ActiveRecord::Schema.define(version: 20170808090939) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["theme_id"], name: "index_teams_on_theme_id"
+  end
+
+  create_table "theme_records", force: :cascade do |t|
+    t.integer  "theme_id"
+    t.integer  "record_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["record_id"], name: "index_theme_records_on_record_id"
+    t.index ["theme_id"], name: "index_theme_records_on_theme_id"
   end
 
   create_table "themes", force: :cascade do |t|

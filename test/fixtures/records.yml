@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player: one
+  theme: one
+  playtime: 2017-08-10 11:06:59
+
+two:
+  player: two
+  theme: two
+  playtime: 2017-08-10 11:06:59
