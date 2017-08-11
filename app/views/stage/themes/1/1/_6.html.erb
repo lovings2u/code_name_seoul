@@ -1,20 +1,4 @@
-<div class="row">
-  <div class="lockContainer text-center">
-    <div class="lockDigitContainer digit0 col-xs-6">
-      <div class="lockDigit lockDigitPrev">9</div>
-      <div class="lockDigit lockDigitCur">0</div>
-      <div class="lockDigit lockDigitNext">1</div>
-    </div>
-    <div class="lockDigitContainer digit1 col-xs-6">
-      <div class="lockDigit lockDigitPrev">9</div>
-      <div class="lockDigit lockDigitCur">0</div>
-      <div class="lockDigit lockDigitNext">1</div>
-    </div>
-  </div>
-  <%= form_tag '/answer', id: 'form', remote: true, :onsubmit => "checkanswer(2)" do %>
-  <div class="btnContainer">
-    <%= hidden_field_tag 'answer' %>
-    <%= submit_tag 'Get Combination', id: "getBtn" %>
-  </div>
-  <% end %>
+<div class="button_dial text-center" style="margin-top: -800px;">
+  <button data-label="158" id="btn158">158</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button data-label="162" id="btn162">162</button>
 </div>

@@ -9,7 +9,7 @@ class DeviseCreatePlayers < ActiveRecord::Migration[5.0]
       t.belongs_to :theme, null: true
       t.belongs_to :team, null: true
       t.integer :currentstage, null: false, default: 0
-      t.integer :hintcount, null: false, default: 10
+      t.integer :hintcount, null: false, default: 0
       t.datetime :starttime
       t.datetime :endtime
 

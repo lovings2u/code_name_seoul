@@ -4,9 +4,9 @@
   text-align: center;
   margin-top: 10px;
 }
-.btnContainer button, #getBtn
+.btnContainer button, #getBtn, .h-button
 {
-  margin-top: 105px;
+  margin-top: 85px;
   background-color: #33444e;
   border: 1px solid #38e798;
   line-height: 0;

@@ -1,0 +1,9 @@
+<div class="game">
+  <div class="timer"><%= render partial: 'count', left_time: @left_time %></div>
+  <img src="<%= @current_stage.s_img %>" width="100%">
+  <%= form_tag '/script', id: 'form', remote: true, style: "margin-top: -250px;" do %>
+  <div class="btnContainer row">
+    <%= submit_tag '다음으로', id: "getBtn", class:"col-xs-offset-7" %>
+  </div>
+  <% end %>
+</div>

@@ -1,22 +1,20 @@
 if ("<%= @message %>" == "P") {
   swal({
-  title: '정답입니다!',
-  text: '확인버튼을 누르시면 다음 페이지로 넘어갑니다.',
-  type: 'success',
-  confirmButtonText: '확인',
-  confirmButtonColor: '#38e798'
-}).then(
-  function() {
+    title: '정답입니다!',
+    text: '확인버튼을 누르시면 다음 페이지로 넘어갑니다.',
+    type: 'success',
+    confirmButtonText: '확인',
+    confirmButtonColor: '#38e798'
+  }).then(function() {
     window.location.reload();
-  });
+  })
 } else {
   swal({
-  title: '틀렸습니다.',
-  text: '어렵다면 힌트를 사용해보세요!\n',
-  type: 'error',
-  confirmButtonText: '확인',
-  confirmButtonColor: '#38e798'
-}).then(
-  function() {
-  });
+    title: '틀렸습니다.',
+    text: '어렵다면 힌트를 사용해보세요!',
+    type: 'error',
+    confirmButtonText: '확인',
+    confirmButtonColor: '#38e798'
+  }).then(function() {
+  })
 }

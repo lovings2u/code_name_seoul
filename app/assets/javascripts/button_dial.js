@@ -1,4 +1,4 @@
-$(function() {
+$(document).on("turbolinks:load", function() {
   var loading = function(e) {
     e.preventDefault();
     e.stopPropagation();
@@ -28,7 +28,7 @@ $(function() {
       method: 'POST',
       data: { 'answer': 162 }
     }).done(function(data) {
-      eval(data);
+      window.location.reload();
       });
     });
   });
@@ -46,8 +46,8 @@ $(function() {
       method: 'POST',
       data: { 'answer': 162 }
     }).done(function(data) {
-      eval(data);
+      window.location.reload();
       });
     });
   });
-})
+});

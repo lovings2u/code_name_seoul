@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20170810020801) do
     t.integer  "theme_id"
     t.integer  "team_id"
     t.integer  "currentstage",           default: 0,  null: false
-    t.integer  "hintcount",              default: 10, null: false
+    t.integer  "hintcount",              default: 0,  null: false
     t.datetime "starttime"
     t.datetime "endtime"
     t.string   "reset_password_token"
@@ -89,15 +89,19 @@ ActiveRecord::Schema.define(version: 20170810020801) do
   end
 
   create_table "stages", force: :cascade do |t|
-    t.integer  "number",         null: false
-    t.string   "name",           null: false
-    t.string   "questionlayout", null: false
-    t.string   "answerlayout",   null: false
-    t.string   "answer",         null: false
+    t.integer  "number",                         null: false
+    t.string   "name",                           null: false
+    t.string   "questionlayout",                 null: false
+    t.string   "answerlayout",                   null: false
+    t.string   "answer",                         null: false
     t.string   "q_img"
+    t.boolean  "is_viewed",      default: false
+    t.string   "s_img"
+    t.string   "hint_img"
+    t.string   "help_img"
     t.integer  "team_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.index ["team_id"], name: "index_stages_on_team_id"
   end
 

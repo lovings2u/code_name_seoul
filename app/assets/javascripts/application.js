@@ -21,11 +21,3 @@
 //= require button_dial
 //= require custom
 //= require_tree .
-$(function() {
-  swal(
-  'Oops...',
-  'Something went wrong!',
-  'error'
-);
-console.log("done");
-})

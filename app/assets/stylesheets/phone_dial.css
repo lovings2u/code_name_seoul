@@ -27,7 +27,7 @@
 ----*/
 
 #pincode {
-  position: fixed;
+  position: inherit;
   overflow: hidden;
   z-index: 100;
   background-size: cover;

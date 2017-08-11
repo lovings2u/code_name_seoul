@@ -40,6 +40,7 @@ $(function() {
           $min_2  = this.$.minutes.eq(1),
           $sec_1  = this.$.seconds.eq(0),
           $sec_2  = this.$.seconds.eq(1);
+
           this.countdown_interval = setInterval(function() {
           if(that.total_seconds > 0) {
               --that.values.seconds;
@@ -114,6 +115,7 @@ $(function() {
           val_2       = value.toString().charAt(1),
           fig_1_value = $el_1.find('.top').html(),
           fig_2_value = $el_2.find('.top').html();
+
       if(value >= 10) {
 
           // Animate only if the figure has changed
@@ -123,8 +125,8 @@ $(function() {
       else {
 
           // If we are under 10, replace first figure with 0
-          if(fig_1_value !== '0') this.animateFigure($el_1, 0);
-          if(fig_2_value !== val_1) this.animateFigure($el_2, val_1);
+          if (fig_1_value !== val_1) this.animateFigure($el_1, 0);
+          if(fig_2_value !== val_1) this.animateFigure($el_2, val_2);
       }
     }
   };

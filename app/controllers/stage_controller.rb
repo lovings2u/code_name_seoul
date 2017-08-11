@@ -16,10 +16,22 @@ class StageController < ApplicationController
         end
         @themeid = current_player.theme_id
         @teamid = current_player.team_id
-        @left_time = time_diff(current_player.endtime - 9*3600, DateTime.now).split("")
+        @left_time = time_diff(current_player.endtime - 9*3600, DateTime.now)
         @current_stage = Stage.find(current_player.currentstage)
         puts current_player.currentstage
-        render 'stage/game', layout: 'stage'
+        # current_player.update(currentstage: 6)
+        unless @current_stage.is_viewed
+          render 'stage/script', layout: 'stage'
+        else
+          render 'stage/game', layout: 'stage'
+        end
+    end
+
+    def script
+      current_stage = Stage.find(current_player.currentstage)
+      current_stage.update(is_viewed: true)
+
+      redirect_to '/game'
     end
 
     def timer
@@ -96,19 +108,20 @@ class StageController < ApplicationController
     end
 
     def answercheck
-        stage = Stage.find(current_player.currentstage)
-        answer = params[:answer]
+      stage = Stage.find(current_player.currentstage)
+      answer = params[:answer]
+      @stage_num = current_player.currentstage
 
-        respond_to do |format|
-            if stage.answer == answer
-                @message = "P"
-                current_player.update(currentstage: current_player.currentstage + 1)
-                format.js
-            else
-                @message = "F"
-                format.js
-            end
+      respond_to do |format|
+        if stage.answer == answer
+          @message = "P"
+          current_player.update(currentstage: current_player.currentstage + 1)
+          format.js
+        else
+          @message = "F"
+          format.js
         end
+      end
     end
 
     def gameending
@@ -119,22 +132,40 @@ class StageController < ApplicationController
         # 시간 다됐을 때 뜨는 화면
     end
 
+    def get_hint
+      @h_img = Stage.find(current_player.currentstage).hint_img
+      current_player.hintcountdown
+      puts @h_img
+      respond_to do |format|
+        format.js
+      end
+    end
+
+    def get_help
+      @h_img = Stage.find(current_player.currentstage).help_img
+      current_player.hintcountdown
+      puts @h_img
+      respond_to do |format|
+        format.js
+      end
+    end
+
     private
 
     def time_diff(start_time, end_time)
-        seconds_diff = (start_time - end_time).to_i.abs
+      seconds_diff = (start_time - end_time).to_i.abs
 
-        days = seconds_diff / 86400
-        seconds_diff -= days * 86400
+      days = seconds_diff / 86400
+      seconds_diff -= days * 86400
 
-        hours = seconds_diff / 3600
-        seconds_diff -= hours * 3600
+      hours = seconds_diff / 3600
+      seconds_diff -= hours * 3600
 
-        minutes = seconds_diff / 60
-        seconds_diff -= minutes * 60
+      minutes = seconds_diff / 60
+      seconds_diff -= minutes * 60
 
-        seconds = seconds_diff
+      seconds = seconds_diff
 
-        "%02d%02d%02d" % [ hours, minutes, seconds ]
-        end
+      "%02d%02d%02d" % [ hours, minutes, seconds ]
+    end
 end

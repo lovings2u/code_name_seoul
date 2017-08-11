@@ -1,6 +1,13 @@
-<div class="button_dial text-center">
-  <div class="col-xs-12">
-    <button data-label="158" id="btn158">158</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button data-label="162" id="162">162</button>
-  </div>
+<div class="short" style="margin-top: -900px;">
+  <%= form_tag '/answer', id: 'form', class: "text-center", remote: true, :onsubmit => "checkanswer2()" do %>
+    <div class="question">
+      <input type="text" required/>
+      <input type="text" required/>
+      <input type="text" required/>
+      <input type="text" required/>
+    </div>
+    <h1>한 글자씩 입력하세요</h1>
+    <%= hidden_field_tag 'answer' %>
+    <%= submit_tag 'Enter Password', id: "getBtn" %>
+  <% end %>
 </div>

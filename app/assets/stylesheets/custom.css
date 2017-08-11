@@ -1,0 +1,17 @@
+
+#hint-img {
+  bottom: 165px;
+  position: fixed;
+  left: 25px;
+  z-index: 999;
+  padding: 3px 7px 3px 7px;
+  border-radius: 5px;
+}
+#help-img {
+  bottom: 20px;
+  position: fixed;
+  left: 25px;
+  z-index: 999;
+  padding: 3px 7px 3px 7px;
+  border-radius: 5px;
+}

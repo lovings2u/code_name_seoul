@@ -5,7 +5,7 @@ $(function($) {
     var enterCode = "";
     enterCode.toString();
 
-    $("#numbers button").click(function() {
+    $("#numbers .num-btn").click(function() {
 
       var clickedNumber = $(this).text().toString()[0];
       enterCode = enterCode + clickedNumber;
@@ -38,7 +38,7 @@ $(function($) {
 
     });
 
-    $("#restartbtn").click(function(){
+    $(".clear").click(function(){
       enterCode = "";
       $("#fields .numberfield").removeClass("active");
       $("#fields .numberfield").removeClass("right");
