@@ -14,11 +14,11 @@ class StageController < ApplicationController
             current_player.currentstage = 1
             current_player.save
         end
-
         @themeid = current_player.theme_id
         @teamid = current_player.team_id
-        @left_time = time_diff(current_player.endtime - 9*3600, DateTime.now)
-
+        @left_time = time_diff(current_player.endtime - 9*3600, DateTime.now).split("")
+        @current_stage = Stage.find(current_player.currentstage)
+        puts current_player.currentstage
         render 'stage/game', layout: 'stage'
     end
 
@@ -28,7 +28,7 @@ class StageController < ApplicationController
     end
 
     def gethintbool
-        
+
         getbool = false
         # 상대방이 풀었는지 확인
         anotherteam = Team.find(current_player.team.anotherteam)
@@ -68,7 +68,7 @@ class StageController < ApplicationController
         end
 
         layoutstr = stage.questionlayout
-        
+
         respond_to do |format|
             format.html { render layout: layoutstr }
         end
@@ -124,10 +124,10 @@ class StageController < ApplicationController
     def time_diff(start_time, end_time)
         seconds_diff = (start_time - end_time).to_i.abs
 
-        days = seconds_diff / 86400 
+        days = seconds_diff / 86400
         seconds_diff -= days * 86400
 
-        hours = seconds_diff / 3600  
+        hours = seconds_diff / 3600
         seconds_diff -= hours * 3600
 
         minutes = seconds_diff / 60

@@ -2,7 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import 'bootstrap';
 @import 'countdown';
+@import 'sweetalert';
 @import 'lock_dial';
 @import 'phone_dial';
 @import 'short_question';

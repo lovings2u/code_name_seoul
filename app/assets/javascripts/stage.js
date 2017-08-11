@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require sweetalert
 //= require TweenMax.min
 //= require countdown
 //= require lock_dial

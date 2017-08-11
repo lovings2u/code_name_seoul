@@ -2,7 +2,6 @@ $(function($) {
   $(document).ready(function() {
 
     // http://www.jsfuck.com/
-    var pin = 8534;
     var enterCode = "";
     enterCode.toString();
 
@@ -15,32 +14,25 @@ $(function($) {
       $("#fields .numberfield:eq(" + lengthCode + ")").addClass("active");
 
       if (lengthCode == 3) {
-
-        // Check the PIN
-        if (enterCode == pin) {
-          // Right PIN!
-          alert("맞춤!");
-          $.ajax({
-            url: '/answer',
-            method: 'POST',
-            data: { 'answer': enterCode },
-            success: function(data) {
-              eval(data);
-              // window.location.reload();
-            }
-          });
-        } else {
-          // Wrong PIN!
-          $("#fields").addClass("miss");
-          enterCode = "";
-          setTimeout(function() {
-            $("#fields .numberfield").removeClass("active");
-          }, 200);
-          setTimeout(function() {
-            $("#fields").removeClass("miss");
-          }, 500);
-
-        }
+        $.ajax({
+          url: '/answer',
+          method: 'POST',
+          data: { 'answer': enterCode }
+        }).done(function(data) {
+          eval(data);
+          if(data == "P") {
+          } else {
+            // Wrong PIN!
+            $("#fields").addClass("miss");
+            enterCode = "";
+            setTimeout(function() {
+              $("#fields .numberfield").removeClass("active");
+            }, 200);
+            setTimeout(function() {
+              $("#fields").removeClass("miss");
+            }, 500);
+          }
+        } );
 
       } else {}
 

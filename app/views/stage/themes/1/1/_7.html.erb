@@ -1,12 +1,13 @@
 <div class="long">
-  <form class="text-center">
+  <%= form_tag '/answer', id: 'form', class: "text-center", remote: true, :onsubmit => "checkanswer3()" do %>
     <h1>주관식문제</h1>
     <div class="question">
-      <input type="text" required/>
-      <input type="text" required/>
-      <input type="text" required/>
-      <input type="text" required/>
+      <input type="text" required placeholder="1"/>
+      <input type="text" required placeholder="2"/>
+      <input type="text" required placeholder="3"/>
+      <input type="text" required placeholder="4"/>
     </div>
-    <button>확인</button>
-  </form>
+    <%= hidden_field_tag 'answer' %>
+    <%= submit_tag '확인', id: "getBtn" %>
+  <% end %>
 </div>

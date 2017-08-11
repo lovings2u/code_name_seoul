@@ -11,7 +11,10 @@
       <div class="lockDigit lockDigitNext">1</div>
     </div>
   </div>
+  <%= form_tag '/answer', id: 'form', remote: true, :onsubmit => "checkanswer(2)" do %>
   <div class="btnContainer">
-    <button id="getBtn">Get Combination</button>
+    <%= hidden_field_tag 'answer' %>
+    <%= submit_tag 'Get Combination', id: "getBtn" %>
   </div>
+  <% end %>
 </div>

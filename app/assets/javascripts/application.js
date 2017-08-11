@@ -14,9 +14,18 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require TweenMax.min
+//= require sweetalert
 //= require countdown
 //= require lock_dial
 //= require phone_dial
 //= require button_dial
 //= require custom
 //= require_tree .
+$(function() {
+  swal(
+  'Oops...',
+  'Something went wrong!',
+  'error'
+);
+console.log("done");
+})

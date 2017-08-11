@@ -59,10 +59,8 @@ $(function() {
               // Update DOM values
               // Hours
               that.checkHour(that.values.hours, $hour_1, $hour_2);
-
               // Minutes
               that.checkHour(that.values.minutes, $min_1, $min_2);
-
               // Seconds
               that.checkHour(that.values.seconds, $sec_1, $sec_2);
 
@@ -116,7 +114,6 @@ $(function() {
           val_2       = value.toString().charAt(1),
           fig_1_value = $el_1.find('.top').html(),
           fig_2_value = $el_2.find('.top').html();
-
       if(value >= 10) {
 
           // Animate only if the figure has changed
@@ -131,6 +128,6 @@ $(function() {
       }
     }
   };
-  if (window.location.href == 'http://localhost:3000/game')
+  if(window.location.href=='http://localhost:3000/game')
     Countdown.init();
 })

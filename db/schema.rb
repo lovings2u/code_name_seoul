@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(version: 20170810020801) do
     t.string   "questionlayout", null: false
     t.string   "answerlayout",   null: false
     t.string   "answer",         null: false
+    t.string   "q_img"
     t.integer  "team_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
@@ -101,11 +102,12 @@ ActiveRecord::Schema.define(version: 20170810020801) do
   end
 
   create_table "teams", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.string   "imageurl",   null: false
+    t.string   "name",        null: false
+    t.string   "imageurl",    null: false
     t.integer  "theme_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "anotherteam"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.index ["theme_id"], name: "index_teams_on_theme_id"
   end
 
