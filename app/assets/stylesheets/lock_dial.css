@@ -1,3 +1,9 @@
+.lock-dial {
+  margin-top: 85%;
+}
+.short-lock-dial {
+  margin-top: 93%;
+}
 
 .btnContainer
 {
@@ -7,6 +13,7 @@
 .btnContainer button, #getBtn, .h-button
 {
   margin-top: 85px;
+  margin-bottom: 80px;
   background-color: #33444e;
   border: 1px solid #38e798;
   line-height: 0;

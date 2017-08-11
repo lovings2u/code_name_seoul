@@ -1,9 +1,6 @@
 body {
   background-color: #3f3f3f;
 }
-.game {
-  position: relative;
-}
 
 .wrap {
   position: absolute;
@@ -13,6 +10,7 @@ body {
   right: 0;
   margin-top: 35px;
   height: 310px;
+  z-index: 999;
 }
 
 a {

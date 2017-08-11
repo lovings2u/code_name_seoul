@@ -38,6 +38,7 @@ var get_hint = function() {
     method: "POST"
   }).done(function() {
     $('#hint-img').attr("data-hint-count", hint_count-1);
+    $('#hint-img').attr("onclick", "");
     $('#help-img').attr("onclick", "get_help();");
     })
   })
@@ -55,6 +56,7 @@ var get_help = function() {
     url: "/help",
     method: "POST"
   }).done(function(){
+    $('#help-img').attr("onclick", "");
     console.log("done");
     })
   })

@@ -42,7 +42,7 @@ Stage.find(6).update(answer: "162", q_img: "https://s3.ap-northeast-2.amazonaws.
                      hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/hint/h06_hint.png",
                      help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/help/h06_help.png")
 Stage.find(7).update(answer: "18", q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/quiz/h_q7.png",
-                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/script/h_s1.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/script/h_s7.png",
                      hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/hint/h07_hint.png",
                      help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/help/h07_help.png")
 Stage.find(8).update(answer: "메밀꽃필무렵,진달래꽃,운수좋은날,사슴", q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/quiz/h_q8.png",

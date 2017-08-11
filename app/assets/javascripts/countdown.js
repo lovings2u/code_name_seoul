@@ -40,7 +40,6 @@ $(function() {
           $min_2  = this.$.minutes.eq(1),
           $sec_1  = this.$.seconds.eq(0),
           $sec_2  = this.$.seconds.eq(1);
-
           this.countdown_interval = setInterval(function() {
           if(that.total_seconds > 0) {
               --that.values.seconds;
@@ -60,8 +59,10 @@ $(function() {
               // Update DOM values
               // Hours
               that.checkHour(that.values.hours, $hour_1, $hour_2);
+
               // Minutes
               that.checkHour(that.values.minutes, $min_1, $min_2);
+
               // Seconds
               that.checkHour(that.values.seconds, $sec_1, $sec_2);
 
@@ -125,11 +126,11 @@ $(function() {
       else {
 
           // If we are under 10, replace first figure with 0
-          if (fig_1_value !== val_1) this.animateFigure($el_1, 0);
-          if(fig_2_value !== val_1) this.animateFigure($el_2, val_2);
+          if(fig_1_value !== '0') this.animateFigure($el_1, 0);
+          if(fig_2_value !== val_1) this.animateFigure($el_2, val_1);
       }
     }
   };
-  if(window.location.href=='http://localhost:3000/game')
+  if(window.location.href=="http://localhost:3000/game")
     Countdown.init();
 })
