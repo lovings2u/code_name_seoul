@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/timer' => 'stage#timer'
 
   post '/answer' => 'stage#answercheck'
-  post '/hint' => 'stage#get_hi nt'
+  post '/hint' => 'stage#get_hint'
   post '/help' => 'stage#get_help'
   post '/script' => 'stage#script'
 
@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   get '/stage/count4'
 
   get '/stage/qrcode/:team_id' => 'stage#qrcode'
-  
+
   get '/stage/last' => 'stage#last'
   post '/answerlast' => 'stage#answerchecklast'
 

@@ -16,7 +16,7 @@ class StageController < ApplicationController
         end
         @themeid = current_player.theme_id
         @teamid = current_player.team_id
-        
+
         @times = []
         @times.append current_player.starttime.year
         @times.append current_player.starttime.month - 1
@@ -24,10 +24,10 @@ class StageController < ApplicationController
         @times.append current_player.starttime.hour + 2
         @times.append current_player.starttime.min
         @times.append current_player.starttime.sec
-        
+
          # Stage.find(current_player.currentstage)
         @current_stage = Team.find(@teamid).stages.find_by_number(current_player.currentstage)
-        
+
         if @current_stage.nil?
           # 게임 엔딩
           render 'stage/gameending', layout: 'stage'
@@ -171,7 +171,7 @@ class StageController < ApplicationController
     def answerchecklast
       answer = Theme.first.teams.find(2).stages.find_by_number(14).answer
       useranswer = params[:answer]
-      
+
       if answer == useranswer
         players = Player.where(theme_id: Theme.first.id)
 

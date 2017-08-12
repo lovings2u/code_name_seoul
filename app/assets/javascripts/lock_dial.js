@@ -62,10 +62,10 @@ $(document).on("turbolinks:load", function() {
     item.find('.lockDigitNext').html(n);
   };
 
-  ComboLock.prototype.getCombination = function()
+  ComboLock.prototype.getCombination = function(leng)
   {
   	var res = [];
-  	for (var i = 0; i < 4; i++)
+  	for (var i = 0; i < leng; i++)
   		res.push(parseInt($(".digit"+i+" .lockDigitCur").html()));
   	return res;
   };
