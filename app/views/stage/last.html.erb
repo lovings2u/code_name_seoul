@@ -1,0 +1,14 @@
+<div class="game">
+  <div class="question_img" style="">
+    <img src="<%= @lastimg %>" style="" >
+  </div>
+</div>
+<div class="long" style="margin-top: 0;">
+  <%= form_tag '/answerlast', id: 'form', class: "text-center", remote: true, :onsubmit => "checkanswer2()" do %>
+    <div class="question">
+      <input type="text" name="answer" required/>
+      <h1>H. 끝나서는 안된다.</h1>
+    </div>
+    <%= submit_tag '정답 확인', id: "getBtn" %>
+  <% end %>
+</div>

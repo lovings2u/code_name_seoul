@@ -25,4 +25,8 @@ class Player < ApplicationRecord
   def hintcountdown
     update(hintcount: self.hintcount - 1)
   end
+
+  def currentstageup
+    update(currentstage: self.currentstage + 1)
+  end
 end
