@@ -20,6 +20,7 @@
 //= require phone_dial
 //= require button_dial
 //= require custom
+
 $(function() {
   $('.short form .question input[type="text"]').on('keyup', function() {
      if($(this).val().length > 1) {
