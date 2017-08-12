@@ -1,5 +1,5 @@
 .short {
-  margin-top: 640px;
+  margin-top: 85%;
 }
 .short form {
   z-index: 10;
@@ -96,7 +96,7 @@
 
 
 .long {
-  margin-top: 640px;
+  margin-top: 85%;
 }
 .long form {
   position: relative;
@@ -193,7 +193,7 @@
 
 
 .very_long {
-  margin-top: 640px;
+  margin-top: 85%;
 }
 .very_long form {
   position: relative;

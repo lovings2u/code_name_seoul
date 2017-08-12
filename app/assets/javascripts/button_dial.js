@@ -16,11 +16,11 @@ $(document).on("turbolinks:load", function() {
   }
   $("#btn158").on("click", function() {
     swal({
-    title: '주의!',
-    text: '확인버튼을 누르면 다시 돌아올 수 없습니다. 주의하세요!',
-    imageUrl: 'https://unsplash.it/400/200',
-    imageWidth: 400,
-    imageHeight: 200,
+    title: '주의하세요!',
+    text: '확인버튼을 누르면 다시 돌아올 수 없습니다!',
+    imageUrl: 'https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/quiz/h_q7_next_password1.png',
+    imageWidth: 360,
+    imageHeight: 640,
     animation: false
   }).then(function() {
     $.ajax({
@@ -34,11 +34,11 @@ $(document).on("turbolinks:load", function() {
   });
   $("#btn162").on("click", function() {
     swal({
-    title: '주의!',
-    text: '확인버튼을 누르면 다시 돌아올 수 없습니다. 주의하세요!',
-    imageUrl: 'https://unsplash.it/400/200',
-    imageWidth: 400,
-    imageHeight: 200,
+    title: '주의하세요!',
+    text: '확인버튼을 누르면 다시 돌아올 수 없습니다!',
+    imageUrl: 'https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/quiz/h_q7_next_password2.png',
+    imageWidth: 360,
+    imageHeight: 640,
     animation: false
   }).then(function() {
     $.ajax({

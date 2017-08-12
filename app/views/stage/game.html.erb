@@ -1,6 +1,8 @@
 <div class="game">
-  <img src="<%= @current_stage.q_img %>" width="100%">
   <div class="timer"><%= render partial: 'count', left_time: @left_time %></div>
+  <div style="position: absolute;">
+    <img src="<%= @current_stage.q_img %>" width="100%" >
+  </div>
   <%= render partial: "stage/themes/#{current_player.theme_id}/#{current_player.team_id}/#{current_player.currentstage}", stage: current_player.currentstage %>
   <% unless @current_stage.hint_viewed %>
   <div id="hint-img" onclick="get_hint();" data-hint-count="<%= current_player.hintcount %>">
