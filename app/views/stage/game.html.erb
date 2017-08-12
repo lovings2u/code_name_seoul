@@ -18,12 +18,14 @@
       <% end %>
     </div>
   </div>
+  <% if @current_player.currentstage != 14 %>
   <div id="hint-img" onclick="get_hint();" data-hint-count="<%= current_player.hintcount %>">
-    <img src="https://s3.ap-northeast-2.amazonaws.com/codename-seoul/hint.png" alt="hint">
+    <img src="https://s3.ap-northeast-2.amazonaws.com/codename-seoul/hint.png" alt="hint" width="120px;">
   </div>
   <% # end %>
   <% # unless @current_stage.help_viewed %>
   <div id="help-img" onclick="before_help();" data-hint-count="<%= current_player.hintcount %>">
-    <img src="https://s3.ap-northeast-2.amazonaws.com/codename-seoul/help.png" alt="help">
+    <img src="https://s3.ap-northeast-2.amazonaws.com/codename-seoul/help.png" alt="help" width="120px;">
   </div>
+  <% end %>
 </div>

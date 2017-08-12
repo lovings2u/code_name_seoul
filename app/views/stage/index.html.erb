@@ -1,5 +1,4 @@
-<%= link_to '로그아웃하기', '/players/sign_out', method: :delete %>
 
 <%= form_tag '/game', method: :post do %>
-    <%= submit_tag '동의하기' %>
+    <%= submit_tag '동의하기', class: "btn btn-info btn-lg" %>
 <% end %>

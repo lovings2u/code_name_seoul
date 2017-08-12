@@ -1,16 +1,16 @@
 
 #hint-img {
-  top: 40px;
+  top: 50px;
   position: fixed;
-  left: 40px;
+  left: 60px;
   z-index: 999;
   padding: 3px 7px 3px 7px;
   border-radius: 5px;
 }
 #help-img {
-  top: 40px;
+  top: 50px;
   position: fixed;
-  right: 40px;
+  right: 60px;
   z-index: 999;
   padding: 3px 7px 3px 7px;
   border-radius: 5px;

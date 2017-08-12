@@ -11,24 +11,19 @@ $(document).on("turbolinks:load", function() {
 
     $(".lockDigitContainer").mousedown(function(evt) {
       self.mouseDownItem = $(this);
-      self.mouseDownItem.addClass('depressed');
-      self.mouseDownY = evt.clientY;
     });
 
-    $(document).mouseup(function(evt) {
-      if (self.mouseDownY)
-      {
-        var dir = 'down'
-        if (self.mouseDownY > evt.clientY)
-          var dir = 'up';
+    $(".lockDigitPrev").on("click", function() {
+      var dir = 'down';
+      self.rotateDirection(dir, self.mouseDownItem);
+    })
 
-        self.rotateDirection(dir, self.mouseDownItem);
-        self.mouseDownItem.removeClass('depressed');
+    $(".lockDigitNext").on("click", function() {
+      var dir = 'up';
+      self.rotateDirection(dir, self.mouseDownItem);
+      self.mouseDownItem.removeClass('depressed');
+    })
 
-        self.mouseDownY = null;
-        self.mouseDownItem = null;
-      }
-    });
   };
 
   /**

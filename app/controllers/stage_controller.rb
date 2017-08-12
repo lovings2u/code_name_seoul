@@ -66,12 +66,23 @@ class StageController < ApplicationController
         team_id = params[:team_id]
         if current_player.team_id != team_id.to_i
           current_player.currentstageup
+          redirect_to '/game'
         else
-          redirect_to "/game"
+        redirect_to "/qr_error"
         end
       else
-        redirect_to "/game"
+        redirect_to "/qr_error"
       end
+    end
+
+    def qr_error
+      @times = []
+      @times.append current_player.starttime.year
+      @times.append current_player.starttime.month - 1
+      @times.append current_player.starttime.day
+      @times.append current_player.starttime.hour + 2
+      @times.append current_player.starttime.min
+      @times.append current_player.starttime.sec
     end
 
     def last
@@ -158,6 +169,9 @@ class StageController < ApplicationController
 
       respond_to do |format|
         if stage.answer == answer
+          if @stage_num == 6
+            render nothing: true
+          end
           @message = "P"
           current_player.currentstageup
           format.js

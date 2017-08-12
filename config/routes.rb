@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get '/stage/count4'
 
   get '/stage/qrcode/:team_id' => 'stage#qrcode'
+  get '/qr_error' => 'stage#qr_error'
 
   get '/stage/last' => 'stage#last'
   post '/answerlast' => 'stage#answerchecklast'
