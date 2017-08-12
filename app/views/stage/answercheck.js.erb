@@ -7,6 +7,9 @@ if ("<%= @message %>" == "P") {
     confirmButtonColor: '#38e798'
   }).then(function() {
     window.location.reload();
+  }, function(dismiss){
+    console.log(dismiss);
+    window.location.reload();
   })
 } else {
   swal({

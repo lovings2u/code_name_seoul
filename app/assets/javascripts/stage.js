@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require sweetalert
 //= require TweenMax.min
-//= require countdown
+//= require countdown3
 //= require lock_dial
 //= require phone_dial
 //= require button_dial

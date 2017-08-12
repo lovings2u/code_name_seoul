@@ -144,14 +144,14 @@ Stage.find(26).update(answer: "756",
                      hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g12_hint.png",
                      help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g12_help.png")
 Stage.find(27).update(answer: "",
-                     q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q12.png",
-                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s12.png",
+                     q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q13.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s13.png",
                      after_img: "",
-                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g12_hint.png",
-                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g12_help.png")
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g13_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g13_help.png")
 Stage.find(28).update(answer: "14440220",
-                     q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q12.png",
-                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s12.png",
+                     q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q14.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s14.png",
                      after_img: "",
-                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g12_hint.png",
-                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g12_help.png")
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g14_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g14_help.png")
