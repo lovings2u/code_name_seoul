@@ -26,7 +26,7 @@ var get_hint = function() {
   console.log(hint_count);
   swal({
   title: '힌트를 사용하시겠습니까?',
-  text: hint_count-1 + "회 남았습니다.",
+  text: "현재 " + hint_count + "회 남았습니다.",
   type: 'warning',
   showCancelButton: true,
   cancelButtonColor: '#d33',

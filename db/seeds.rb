@@ -12,10 +12,13 @@ now = Team.create(name: "현재팀", imageurl: 'theme1.png' ,theme: gh, )
 past = Team.create(name: "과거팀", imageurl: 'theme2.png' ,theme: gh, anotherteam: now.id)
 now.update(anotherteam: past.id)
 
-for i in 1..13
+for i in 1..14
   Stage.create(number: i, name: "문제#{i}", questionlayout: "#{i}.html.erb", answerlayout: "#{i}.html.erb", answer: "정답#{i}", team: now)
+end
+for i in 1..14
   Stage.create(number: i, name: "문제#{i}", questionlayout: "#{i}.html.erb", answerlayout: "#{i}.html.erb", answer: "정답#{i}", team: past)
 end
+
 Stage.find(1).update(answer: "1181",
                      q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/quiz/h_q1.png",
                      s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/script/h_s1.png",
@@ -65,3 +68,90 @@ Stage.find(12).update(answer: "근정전", q_img: "https://s3.ap-northeast-2.ama
                      s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/script/h_s12.png",
                      hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/hint/h12_hint.png",
                      help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/help/h12_help.png")
+Stage.find(13).update(answer: "", q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/quiz/h_q12.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/script/h_s12.png",
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/hint/h12_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/help/h12_help.png")
+Stage.find(14).update(answer: "14440220", q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/quiz/h_q12.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/script/h_s12.png",
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/hint/h12_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/help/h12_help.png")
+
+# 과거팀
+Stage.find(15).update(answer: "헌법재판소",
+                     q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q1.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s1.png",
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g01_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g01_help.png")
+Stage.find(16).update(answer: "손병희선생집터",
+                     q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q2.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s2.png",
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g02_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g02_help.png")
+Stage.find(17).update(answer: "51",
+                     q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q3.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s3.png",
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g03_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g03_help.png")
+Stage.find(18).update(answer: "LEG",
+                     q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q4.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s4.png",
+                     after_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q4_next.png",
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g04_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g04_help.png")
+Stage.find(19).update(answer: "1257",
+                     q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q5.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s5.png",
+                     after_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q5_next.png",
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g05_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g05_help.png")
+Stage.find(20).update(answer: "32",
+                     q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q6.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s6.png",
+                     after_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q6_next.png",
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g06_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g06_help.png")
+Stage.find(21).update(answer: "정지용",
+                     q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q7.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s7.png",
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g07_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g07_help.png")
+Stage.find(22).update(answer: "9.2.17",
+                     q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q8.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s8.png",
+                     after_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q8_next.png",
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g08_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g08_help.png")
+Stage.find(23).update(answer: "고궁박물관",
+                     q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q9.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s9.png",
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g09_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g09_help.png")
+Stage.find(24).update(answer: "14191620#11411320",
+                     q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q10.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s10.png",
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g10_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g10_help.png")
+Stage.find(25).update(answer: "측우기",
+                     q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q11.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s11.png",
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g11_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g11_help.png")
+Stage.find(26).update(answer: "756",
+                     q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q12.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s12.png",
+                     after_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q12_next.png",
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g12_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g12_help.png")
+Stage.find(27).update(answer: "",
+                     q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q12.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s12.png",
+                     after_img: "",
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g12_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g12_help.png")
+Stage.find(28).update(answer: "14440220",
+                     q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q12.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s12.png",
+                     after_img: "",
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g12_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g12_help.png")
