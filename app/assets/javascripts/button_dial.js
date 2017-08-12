@@ -17,11 +17,11 @@ $(document).on("turbolinks:load", function() {
   $("#btn158").on("click", function() {
     swal({
     title: '주의하세요!',
-    text: '확인버튼을 누르면 다시 돌아올 수 없습니다!',
     imageUrl: 'https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/quiz/h_q7_next_password1.png',
     imageWidth: 360,
     imageHeight: 640,
-    animation: false
+    animation: false,
+    confirmButtonText: '이 버튼을 누르면 다시 돌아올 수 없습니다!'
   }).then(function() {
     $.ajax({
       url: '/answer',
@@ -30,6 +30,9 @@ $(document).on("turbolinks:load", function() {
     }).done(function(data) {
       window.location.reload();
       });
+    }, function(dismiss){
+      window.location.reload();
+      console.log(dismiss);
     });
   });
   $("#btn162").on("click", function() {
@@ -48,6 +51,9 @@ $(document).on("turbolinks:load", function() {
     }).done(function(data) {
       window.location.reload();
       });
+    }, function(dismiss){
+      console.log(dismiss);
+      window.location.reload();
     });
   });
 });

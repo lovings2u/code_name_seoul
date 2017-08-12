@@ -19,5 +19,7 @@ if ("<%= @message %>" == "P") {
     confirmButtonText: '확인',
     confirmButtonColor: '#38e798'
   }).then(function() {
+  }, function(dismiss){
+    console.log(dismiss);
   })
 }

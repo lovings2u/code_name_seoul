@@ -1,5 +1,5 @@
 // Create Countdown
-$(function() {
+$(document).on("turbolinks:load",function(){
   var Countdown = {
 
     // Backbone-like structure

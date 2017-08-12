@@ -41,6 +41,8 @@ var get_hint = function() {
     $('#hint-img').attr("onclick", "");
     $('#help-img').attr("onclick", "get_help();");
     })
+  }, function(dismiss){
+    console.log(dismiss);
   })
 }
 var get_help = function() {
@@ -59,6 +61,8 @@ var get_help = function() {
     $('#help-img').attr("onclick", "");
     console.log("done");
     })
+  }, function(dismiss){
+    console.log(dismiss);
   })
 }
 var before_help = function() {

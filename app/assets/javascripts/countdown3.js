@@ -1,4 +1,4 @@
-$(function() {
+$(document).on("turbolinks:load",function(){
   var Countdown = function(options) {
 
     $.extend(this, {
@@ -68,9 +68,6 @@ $(function() {
     }
   });
   window.Countdown = Countdown;
-});
-
-$(function() {
   var app = new Countdown({
     //properties
     //endDate: new Date(year, month, day, hour, minute, second, miliseco)

@@ -21,7 +21,7 @@
 //= require button_dial
 //= require custom
 
-$(function() {
+$(document).on("turbolinks:load",function(){
   $('.short form .question input[type="text"]').on('keyup', function() {
      if($(this).val().length > 1) {
        $(this).val($(this).val().substring(0, 1));
