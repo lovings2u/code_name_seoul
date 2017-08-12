@@ -96,7 +96,11 @@ ActiveRecord::Schema.define(version: 20170810020801) do
     t.string   "answer",                         null: false
     t.string   "q_img"
     t.boolean  "is_viewed",      default: false
+    t.boolean  "hint_viewed",    default: false
+    t.boolean  "help_viewed",    default: false
     t.string   "s_img"
+    t.string   "after_img",      default: ""
+    t.boolean  "after_viewed",   default: false
     t.string   "hint_img"
     t.string   "help_img"
     t.integer  "team_id"

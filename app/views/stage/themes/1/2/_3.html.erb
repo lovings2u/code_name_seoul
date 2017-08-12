@@ -1,0 +1,9 @@
+<div class="short" style="margin-top: -700px;">
+  <%= form_tag '/answer', id: 'form', class: "text-center", remote: true, :onsubmit => "checkanswer2()" do %>
+    <div class="question">
+      <input type="text" required />
+    </div>
+    <%= hidden_field_tag 'answer' %>
+    <%= submit_tag '정답 확인', id: "getBtn" %>
+  <% end %>
+</div>
