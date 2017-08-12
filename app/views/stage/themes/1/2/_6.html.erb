@@ -1,0 +1,20 @@
+<div style="margin-top: -900px;">
+  <div class="lockContainer text-center">
+    <div class="lockDigitContainer digit0 col-xs-6">
+      <div class="lockDigit lockDigitPrev">9</div>
+      <div class="lockDigit lockDigitCur">0</div>
+      <div class="lockDigit lockDigitNext">1</div>
+    </div>
+    <div class="lockDigitContainer digit1 col-xs-6">
+      <div class="lockDigit lockDigitPrev">9</div>
+      <div class="lockDigit lockDigitCur">0</div>
+      <div class="lockDigit lockDigitNext">1</div>
+    </div>
+  </div>
+  <%= form_tag '/answer', id: 'form', remote: true, :onsubmit => "checkanswer(2)" do %>
+  <div class="btnContainer">
+    <%= hidden_field_tag 'answer' %>
+    <%= submit_tag '정답 입력', id: "getBtn" %>
+  </div>
+  <% end %>
+</div>

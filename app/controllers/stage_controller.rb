@@ -17,19 +17,32 @@ class StageController < ApplicationController
         @themeid = current_player.theme_id
         @teamid = current_player.team_id
         @left_time = time_diff(current_player.endtime - 9*3600, DateTime.now)
-        @current_stage = Stage.find(current_player.currentstage)
+         # Stage.find(current_player.currentstage)
+        @current_stage = Team.find(@teamid).stages.find_by_number(current_player.currentstage)
         puts current_player.currentstage
         # current_player.update(currentstage: 6)
-        unless @current_stage.is_viewed
-          render 'stage/script', layout: 'stage'
+        @before_stage = Team.find(@teamid).stages.find_by_number(current_player.currentstage-1)
+        unless @before_stage.nil? || @before_stage.after_img.to_s.empty? || @before_stage.after_viewed
+          render 'stage/afterscript', layout: 'stage'
         else
-          render 'stage/game', layout: 'stage'
+          unless @current_stage.is_viewed
+            render 'stage/script', layout: 'stage'
+          else
+            render 'stage/game', layout: 'stage'
+          end
         end
     end
 
     def script
-      current_stage = Stage.find(current_player.currentstage)
+      current_stage = Team.find(current_player.team_id).stages.find_by_number(current_player.currentstage)
       current_stage.update(is_viewed: true)
+
+      redirect_to '/game'
+    end
+
+    def afterscript
+      before_stage = Team.find(current_player.team_id).stages.find_by_number(current_player.currentstage-1)
+      before_stage.update(after_viewed: true)
 
       redirect_to '/game'
     end
@@ -108,7 +121,7 @@ class StageController < ApplicationController
     end
 
     def answercheck
-      stage = Stage.find(current_player.currentstage)
+      stage = Team.find(current_player.team_id).stages.find_by_number(current_player.currentstage)
       answer = params[:answer]
       @stage_num = current_player.currentstage
 
@@ -133,8 +146,12 @@ class StageController < ApplicationController
     end
 
     def get_hint
-      @h_img = Stage.find(current_player.currentstage).hint_img
-      current_player.hintcountdown
+      current_stage = Team.find(current_player.team_id).stages.find_by_number(current_player.currentstage)
+      @h_img = current_stage.hint_img
+      unless current_stage.hint_viewed
+        current_player.hintcountdown
+        current_stage.update(hint_viewed: true)
+      end
       puts @h_img
       respond_to do |format|
         format.js
@@ -142,8 +159,12 @@ class StageController < ApplicationController
     end
 
     def get_help
-      @h_img = Stage.find(current_player.currentstage).help_img
-      current_player.hintcountdown
+      current_stage = Team.find(current_player.team_id).stages.find_by_number(current_player.currentstage)
+      @h_img = current_stage.help_img
+      unless current_stage.help_viewed
+        current_player.hintcountdown
+        current_stage.update(help_viewed: true)
+      end
       puts @h_img
       respond_to do |format|
         format.js
