@@ -9,14 +9,21 @@ html {
   height: 100%;
 }
 body {
-  background: #4ebdc0;
+  background: #333;
 }
+
+.wrap {
+  position: absolute;
+  width: 100%;
+  top: 55px;
+  left: 0px;
+  right: 0px;
+  z-index: 999;
+}
+
 .countdown {
-  margin: 50px auto;
   text-align: center;
   color: #fff;
-  padding: 20px;
-  margin-top: 50px;
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
 }
@@ -33,7 +40,7 @@ body {
   line-height: 120px;
   text-align: center;
   position: relative;
-  background: #4ebdc0;
+  background: #333;
 }
 .countdown .time-circle:hover {
   background: #46babd;
@@ -55,7 +62,7 @@ body {
   width: 100%;
   left: 0;
   line-height: 16px;
-  color: #000;
+  color: #fff;
   opacity: 0.2;
 }
 .countdown .time-circle .progress {
@@ -66,7 +73,7 @@ body {
   top: -3px;
   z-index: -9;
   background-color: #f6f6f6;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
   -moz-border-radius: 50%;
   -o-border-radius: 50%;
   -webkit-border-radius: 50%;

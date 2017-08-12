@@ -74,5 +74,6 @@ $(function() {
   var app = new Countdown({
     //properties
     //endDate: new Date(year, month, day, hour, minute, second, miliseco)
+    endDate: new Date($('#endtime').data('year'), $('#endtime').data('month'), $('#endtime').data('day'), $('#endtime').data('hour'), $('#endtime').data('min'), $('#endtime').data('sec'))
   });
 });

@@ -16,7 +16,15 @@ class StageController < ApplicationController
         end
         @themeid = current_player.theme_id
         @teamid = current_player.team_id
-        @left_time = time_diff(current_player.endtime - 9*3600, DateTime.now)
+        
+        @times = []
+        @times.append current_player.endtime.year
+        @times.append current_player.endtime.month - 1
+        @times.append current_player.endtime.day
+        @times.append current_player.endtime.hour
+        @times.append current_player.endtime.min
+        @times.append current_player.endtime.sec
+        
          # Stage.find(current_player.currentstage)
         @current_stage = Team.find(@teamid).stages.find_by_number(current_player.currentstage)
         puts current_player.currentstage

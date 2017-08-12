@@ -139,8 +139,7 @@ Stage.find(25).update(answer: "측우기",
                      help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g11_help.png")
 Stage.find(26).update(answer: "756",
                      q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q12.png",
-                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/script/g_s12.png",
-                     after_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q12_next.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/quiz/g_q12_next.png",
                      hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g12_hint.png",
                      help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g12_help.png")
 Stage.find(27).update(answer: "",
