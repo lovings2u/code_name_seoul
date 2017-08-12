@@ -68,14 +68,14 @@ Stage.find(12).update(answer: "근정전", q_img: "https://s3.ap-northeast-2.ama
                      s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/script/h_s12.png",
                      hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/hint/h12_hint.png",
                      help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/help/h12_help.png")
-Stage.find(13).update(answer: "", q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/quiz/h_q12.png",
-                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/script/h_s12.png",
-                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/hint/h12_hint.png",
-                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/help/h12_help.png")
-Stage.find(14).update(answer: "14440220", q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/quiz/h_q12.png",
-                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/script/h_s12.png",
-                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/hint/h12_hint.png",
-                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/help/h12_help.png")
+Stage.find(13).update(answer: "", q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/quiz/h_q13.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/script/h_s13.png",
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/hint/h13_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/help/h13_help.png")
+Stage.find(14).update(answer: "14440220", q_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/quiz/h_q14.png",
+                     s_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/script/h_s14.png",
+                     hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/hint/h14_hint.png",
+                     help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/help/h14_help.png")
 
 # 과거팀
 Stage.find(15).update(answer: "헌법재판소",

@@ -33,7 +33,7 @@ class StageController < ApplicationController
           render 'stage/gameending', layout: 'stage'
           return
         end
-
+        puts current_player.currentstage
         # current_player.update(currentstage: 6)
         @before_stage = Team.find(@teamid).stages.find_by_number(current_player.currentstage-1)
         unless @before_stage.nil? || @before_stage.after_img.to_s.empty? || @before_stage.after_viewed
