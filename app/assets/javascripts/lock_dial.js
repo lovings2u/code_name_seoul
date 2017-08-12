@@ -1,4 +1,4 @@
-$(function() {
+var ready = function() {
   function ComboLock()
   {
     this.mouseDownY = null;
@@ -9,13 +9,13 @@ $(function() {
   {
     var self = this;
 
-    $(".lockDigitContainer").mousedown(function(evt) {
+    $(".lockDigitContainer").on('touchstart mousedown', function(evt) {
       self.mouseDownItem = $(this);
       self.mouseDownItem.addClass('depressed');
       self.mouseDownY = evt.clientY;
     });
 
-    $(document).mouseup(function(evt) {
+    $(document).on('touchend touchcancel mouseup', function(evt) {
       if (self.mouseDownY)
       {
         var dir = 'down'
@@ -72,4 +72,6 @@ $(function() {
 
   window.combo = new ComboLock();
   combo.init();
-})
+};
+
+$(document).on('turbolinks:load', ready);
