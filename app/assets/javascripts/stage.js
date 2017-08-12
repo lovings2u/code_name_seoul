@@ -27,4 +27,5 @@ $(document).on("turbolinks:load",function(){
        $(this).val($(this).val().substring(0, 1));
      }
    });
+   document.documentElement.requestFullscreen();
 });
