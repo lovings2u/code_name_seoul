@@ -74,3 +74,7 @@ $(document).on("turbolinks:load",function(){
     endDate: new Date($('#endtime').data('year'), $('#endtime').data('month'), $('#endtime').data('day'), $('#endtime').data('hour'), $('#endtime').data('min'), $('#endtime').data('sec'))
   });
 });
+
+$(function() {
+
+});
