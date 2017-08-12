@@ -1,6 +1,6 @@
 <div class="game">
   <div class="timer"><%= render partial: 'count', left_time: @left_time %></div>
-  <div style="position: absolute;">
+  <div style="">
     <img src="<%= @current_stage.q_img %>" width="100%" >
   </div>
   <%= render partial: "stage/themes/#{current_player.theme_id}/#{current_player.team_id}/#{current_player.currentstage}", stage: current_player.currentstage %>
