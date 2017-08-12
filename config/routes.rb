@@ -13,13 +13,18 @@ Rails.application.routes.draw do
   get '/timer' => 'stage#timer'
 
   post '/answer' => 'stage#answercheck'
-  post '/hint' => 'stage#get_hint'
+  post '/hint' => 'stage#get_hi nt'
   post '/help' => 'stage#get_help'
   post '/script' => 'stage#script'
 
   get '/stage/count2'
   get '/stage/count3'
   get '/stage/count4'
+
+  get '/stage/qrcode/:team_id' => 'stage#qrcode'
+  
+  get '/stage/last' => 'stage#last'
+  post '/answerlast' => 'stage#answerchecklast'
 
   post '/afterscript' => 'stage#afterscript'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

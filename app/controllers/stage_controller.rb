@@ -18,16 +18,22 @@ class StageController < ApplicationController
         @teamid = current_player.team_id
         
         @times = []
-        @times.append current_player.endtime.year
-        @times.append current_player.endtime.month - 1
-        @times.append current_player.endtime.day
-        @times.append current_player.endtime.hour
-        @times.append current_player.endtime.min
-        @times.append current_player.endtime.sec
+        @times.append current_player.starttime.year
+        @times.append current_player.starttime.month - 1
+        @times.append current_player.starttime.day
+        @times.append current_player.starttime.hour + 2
+        @times.append current_player.starttime.min
+        @times.append current_player.starttime.sec
         
          # Stage.find(current_player.currentstage)
         @current_stage = Team.find(@teamid).stages.find_by_number(current_player.currentstage)
-        puts current_player.currentstage
+        
+        if @current_stage.nil?
+          # 게임 엔딩
+          render 'stage/gameending', layout: 'stage'
+          return
+        end
+
         # current_player.update(currentstage: 6)
         @before_stage = Team.find(@teamid).stages.find_by_number(current_player.currentstage-1)
         unless @before_stage.nil? || @before_stage.after_img.to_s.empty? || @before_stage.after_viewed
@@ -53,6 +59,23 @@ class StageController < ApplicationController
       before_stage.update(after_viewed: true)
 
       redirect_to '/game'
+    end
+
+    def qrcode
+      if current_player.currentstage == 13
+        team_id = params[:team_id]
+        if current_player.team_id != team_id.to_i
+          current_player.currentstageup
+        else
+          redirect_to "/game"
+        end
+      else
+        redirect_to "/game"
+      end
+    end
+
+    def last
+      @lastimg = Theme.first.teams.find(2).stages.find_by_number(14).q_img
     end
 
     def timer
@@ -136,11 +159,29 @@ class StageController < ApplicationController
       respond_to do |format|
         if stage.answer == answer
           @message = "P"
-          current_player.update(currentstage: current_player.currentstage + 1)
+          current_player.currentstageup
           format.js
         else
           @message = "F"
           format.js
+        end
+      end
+    end
+
+    def answerchecklast
+      answer = Theme.first.teams.find(2).stages.find_by_number(14).answer
+      useranswer = params[:answer]
+      
+      if answer == useranswer
+        players = Player.where(theme_id: Theme.first.id)
+
+        @message = "P"
+        @endtime = DateTime.now
+        @lasttime = time_diff(players.first.starttime, @endtime)
+
+        players.each do |player|
+          player.update(currentstage: 14)
+          player.update(endtime: @endtime)
         end
       end
     end
@@ -182,7 +223,7 @@ class StageController < ApplicationController
     private
 
     def time_diff(start_time, end_time)
-      seconds_diff = (start_time - end_time).to_i.abs
+      seconds_diff = (start_time.to_i - end_time.to_i).abs
 
       days = seconds_diff / 86400
       seconds_diff -= days * 86400
@@ -195,6 +236,6 @@ class StageController < ApplicationController
 
       seconds = seconds_diff
 
-      "%02d%02d%02d" % [ hours, minutes, seconds ]
+      "%02d시간 %02d분 %02d초" % [ hours, minutes, seconds ]
     end
 end
