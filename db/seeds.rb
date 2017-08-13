@@ -156,5 +156,5 @@ Stage.find(28).update(answer: "14440220",
                      after_img: "",
                      hint_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/hint/g14_hint.png",
                      help_img: "https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/past/help/g14_help.png")
-Player.create(name: "test", password: "123456", password_confirmation: "123456", theme_id: 1, team_id: 1, hintcount: 10, starttime: DateTime.now, endtime: DateTime.now)
-# Player.create(name: "test", password: "123456", password_confirmation: "123456", theme_id: 1, team_id: 1, hintcount: 10, starttime: "2017-08-13 14:30:05", endtime: "2017-08-13 17:00:00")
+# Player.create(name: "test", password: "123456", password_confirmation: "123456", theme_id: 1, team_id: 1, hintcount: 10, starttime: DateTime.now, endtime: DateTime.now)
+Player.create(name: "test", password: "123456", password_confirmation: "123456", theme_id: 1, team_id: 1, hintcount: 10, starttime: "2017-08-13 14:30:05", endtime: "2017-08-13 17:00:00")

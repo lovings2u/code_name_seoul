@@ -6,14 +6,13 @@ if ("<%= @message %>" == "P") {
     confirmButtonText: '확인',
     confirmButtonColor: '#38e798'
   }).then(function() {
-    
+
   }, function(dismiss){
     window.location.reload();
   })
 } else {
   swal({
     title: '틀렸습니다.',
-    text: '어렵다면 힌트를 사용해보세요!',
     type: 'error',
     confirmButtonText: '확인',
     confirmButtonColor: '#38e798'

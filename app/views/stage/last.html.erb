@@ -1,14 +1,14 @@
-<div class="game">
+<div class="game text-center">
   <div class="question_img" style="">
-    <img src="https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/quiz/h_q15.png" style="" >
+    <img src="https://s3.ap-northeast-2.amazonaws.com/codename-seoul/seoul/now/quiz/h_q15.png" width="100%" >
   </div>
 </div>
-<div class="long" style="margin-top: 0;">
-  <%= form_tag '/answerlast', id: 'form', class: "text-center", remote: true, :onsubmit => "checkanswer2()" do %>
+<div class="com text-center" style="margin-top: 0;">
+  <%= form_tag '/answerlast', id: 'form', remote: true, :onsubmit => "checkanswer2()" do %>
     <div class="question">
       <input type="text" name="answer" required/>
       <h1>H. 끝나서는 안된다.</h1>
     </div>
-    <%= submit_tag '정답 확인', id: "getBtn" %>
+    <%= submit_tag '정답 확인', id: "lastBtn" %>
   <% end %>
 </div>

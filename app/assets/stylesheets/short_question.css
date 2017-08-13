@@ -286,3 +286,111 @@
   background: #38e798;
   color: white;
 }
+
+
+.com {
+  background-color: #232323;
+}
+.com form {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+  left: 50%;
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.com form h1 {
+  color: #38e798;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  margin-left: 15px;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.com form button {
+  margin-top: 35px;
+  background-color: #33444e;
+  border: 1px solid #38e798;
+  line-height: 0;
+  font-size: 20px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20px 20px;
+  border-radius: 10px;
+  color: #38e798;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+#lastBtn {
+  margin-top: 35px;
+  margin-bottom: 80px;
+  background-color: #33444e;
+  border: 1px solid #38e798;
+  line-height: 0;
+  font-size: 20px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20px 20px;
+  border-radius: 10px;
+  color: #38e798;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+.com form button:hover, .very_long form button:focus {
+  color: white;
+  background-color: #38e798;
+}
+.com form .question {
+  position: relative;
+  padding: 10px 0;
+}
+.com form .question:first-of-type {
+  padding-top: 0;
+}
+.com form .question:last-of-type {
+  padding-bottom: 0;
+}
+.com form .question label {
+  transform-origin: left center;
+  color: #38e798;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  font-size: 10px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  display: block;
+  position: absolute;
+  margin-top: -44px;
+  z-index: 2;
+  pointer-events: none;
+}
+.com form .question input[type="text"] {
+  appearance: none;
+  background-color: #33444e;
+  border: 1px solid #38e798;
+  line-height: 30px;
+  font-size: 30px;
+  width: 40%;
+  box-sizing: border-box;
+  border-radius: 32px;
+  color: #38e798;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+.com form .question input[type="text"]:focus {
+  outline: none;
+  background: #38e798;
+  color: white;
+}
